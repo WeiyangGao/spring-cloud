@@ -12,28 +12,33 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.E
 import org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerEndpointsConfigurer;
 
 
-@Configuration
-@EnableAuthorizationServer
-public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdapter {
+//@Configuration
+//@EnableAuthorizationServer
+//public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdapter {
+//
+//    @Autowired
+//    private AuthenticationManager authenticationManager;
+//    @Autowired
+//    private PasswordEncoder passwordEncoder;
+//
+//    @Override
+//    public void configure(AuthorizationServerEndpointsConfigurer endpoints) throws Exception {
+//        endpoints.authenticationManager(authenticationManager);
+//    }
+//
+//    @Override
+//    public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
+//        clients.inMemory()
+//                .withClient("clientapp")
+//                .secret(passwordEncoder.encode("112233"))
+//                // 密码模式
+//                .authorizedGrantTypes("password")
+//                .scopes("read_userinfo", "read_contacts");
+//    }
+//
+//}
 
-    @Autowired
-    private AuthenticationManager authenticationManager;
-    @Autowired
-    private PasswordEncoder passwordEncoder;
 
-    @Override
-    public void configure(AuthorizationServerEndpointsConfigurer endpoints) throws Exception {
-        endpoints.authenticationManager(authenticationManager);
-    }
-
-    @Override
-    public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
-        clients.inMemory()
-                .withClient("clientapp")
-                .secret(passwordEncoder.encode("112233"))
-                // 密码模式
-                .authorizedGrantTypes("password")
-                .scopes("read_userinfo", "read_contacts");
-    }
+public class AuthorizationServerConfig {
 
 }
