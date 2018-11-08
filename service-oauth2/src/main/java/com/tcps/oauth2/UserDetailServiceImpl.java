@@ -10,17 +10,17 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 
-@Component
-public class UserDetailServiceImpl implements UserDetailsService {
+//@Component
+public class UserDetailServiceImpl  {
 
-    @Autowired
-    private PasswordEncoder passwordEncoder;
-
-    @Override
-    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        return new User(username,
-                passwordEncoder.encode("root"),
-                AuthorityUtils.commaSeparatedStringToAuthorityList("root"));
-    }
+//    @Autowired
+//    private PasswordEncoder passwordEncoder;
+//
+//    @Override
+//    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+//        return new User(username,
+//                passwordEncoder.encode("root"),
+//                AuthorityUtils.commaSeparatedStringToAuthorityList("root"));
+//    }
 
 }
